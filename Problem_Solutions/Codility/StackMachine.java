@@ -21,7 +21,7 @@ public class StackMachine {
 		for (int i = 0; i < n; ++i) {
 			String tmp = String.valueOf(S.charAt(i));
 			if (tmp.matches("[0-9]")) {
-				queue1.add(Integer.getInteger(tmp));
+				 queue1.add(Integer.valueOf(tmp));
 			} else if (S.charAt(i) == '+' || S.charAt(i) == '*') {
 				queue2.add(S.charAt(i));
 			}
