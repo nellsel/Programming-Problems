@@ -1,0 +1,46 @@
+You have a big chocolate bar of N rows and M columns. All of your no good greedy friends want you to share and so you agree even though you secretly hate them all. Unfortunately, earlier in the day you had left the chocolate bar sitting in the sun and it had melted and then cooled down again. But it was too late, all the chocolate had become warped, leaving the bar with uneven thickness.
+
+The bar is separated by lines into rows and columns of little squares but due to the melting incident, it takes more effort to break along certain lines than others.
+
+You’re feeling particularly lazy and need to figure out the easiest way to break the bar completely into single squares.
+
+There are N - 1 horizontal lines and M - 1 vertical lines, and you will be given costs Hi (horizontal) and Vi (vertical) for each line. Breaking a piece of chocolate along a given line will cost C for each distinct piece of chocolate broken.
+
+e.g. Given a 2 x 3 bar with
+H1 = 4
+V1 = 2
+V2 = 3
+[][][]
+[][][]
+
+The cheapest way to break the bar is to first break it along the horizontal line H1. This costs 4 to break, and there is 1 piece of chocolate being broken, for a cost of 4 * 1. This leaves 2 separate 1 x 3 bars behind, with all the horizontal lines broken.
+[][][]
+
+[][][]
+
+Next you should break both remaining pieces along the line V1 for a cost of 2. This time there are 2 pieces of chocolate to break, since you split it in half with the first break on H1. Breaking both of these bars costs 2 * 2 = 4 total. After breaking the 1 x 3 bars, you now have 2 separate 1 x 2 bars and 2 single squares fully broken off.
+[] [][]
+
+[] [][]
+
+Finally, you should break the line V2 in the 1 x 2 bars at a cost of 3 for each piece of chocolate, 3 * 2 = 6.
+[] [] []
+
+[] [] []
+
+The total cost to break the bar into single squares was (H1 * 1) + (V2 * 2) + (V3 * 2) = 14
+
+Constraints:
+1 <= T <= 20
+2 <= N, M <= 10^6
+0 <= Hi <= 10^9
+0 <= Vi <= 10^9
+
+Input Format:
+There is a single integer T on the first line, T testcases follow.
+Each testcase begins with 2 positive integers, N and M, separated by a space.
+In the next line there are N - 1 integers H1, H2 … H[n-1] separated by spaces, indicating the cost of a horizontal cut along line Hi.
+On the following line there are M – 1 integers V1, V2 … V[m-1] separated by spaces, indicating the cost of a vertical cut along line Vi.
+
+Output Format:
+The minimum total cost to fully divide the bar.

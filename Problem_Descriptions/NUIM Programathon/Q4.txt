@@ -1,0 +1,20 @@
+A city is divided into N regions, labelled A - Z. All regions of the city are connected to 0 or more other regions via roads or railway. In this city there has been an outbreak of cliché and zombies are eating everyone. It takes 1 week for the zombies to spread from an infected region to a non-infected region and make it infected, but there are survivors in each region trying to stop the zombies from spreading. In order to infect a region, at least 3 neighbouring regions must be infected for at least a week. In this situation the zombies can overwhelm the survivors.
+
+Your task is to determine the number of weeks it will take for the entire city to be infected, or if it is impossible for zombies to infect all regions.
+
+Constraints:
+3 <= N <= 26
+0 <= K <= 100
+
+Input format:
+The first line is an integer N, the number of regions in the city.
+The second line is an integer K, the number of connections that exist between regions of the city.
+The third line contains a 3 letter string indicating the initial infected regions.
+This is followed by K lines, each containing a 2 letter string XY indicating a connection between region X and region Y. Regions that are connected are connected both ways, so X is connected to Y and Y is connected to X.
+
+Output format:
+Output either the string:
+“Full infection is not possible.”
+Or:
+“Full infection will happen in X weeks.”
+Where X is the number of weeks it will take for all regions of the city to be infected.

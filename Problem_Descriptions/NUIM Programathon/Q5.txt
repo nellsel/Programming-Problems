@@ -1,0 +1,26 @@
+Subset Sum is a famous problem in computer science where we ask, given a set of integers, is there a non-empty subset whose sum is zero?
+
+Well, the solution to this problem has nothing to do with it whatsoever. For Subset Won’t Sum, you will be given an array of positive integers S. The question is this: Given a lower bound and an upper bound on the array, can you compute the minimum non-zero positive integer that is NOT the sum of some subset of the numbers within the bounds.
+
+For example, given the array [2, 1, 9, 4, 10], and the bounds [1, 1] (indexed from 1 and inclusive of high and low), the solution is 1. This is because the minimum positive number that cannot be made from the set {2} is 1. However, given the bounds [1, 4], the answer is 8. This is because the numbers 1 through 7 can be expressed as the sum of 1 or more of the numbers from the set {1, 2, 4, 9}.
+
+i.e.
+1 = 1
+2 = 2
+3 = 2 + 1
+4 = 4
+5 = 4 + 1
+6 = 4 + 2
+7 = 4 + 2 + 1
+8 = ?
+
+Constraints:
+1 <= N, M <= 10^5
+1 <= Si <= 10^9
+1 <= S1 + S2 + S3 + … + Sn <= 10^9
+
+Input format:
+The first line is an integer N, indicating how many elements there are in the array S. The next line is the N numbers that make up the array S, space separated. The third line is the integer M, the number of questions you will be asked. The remaining M lines are 2 space separated integers, the lower and upper bounds on the query.
+
+Output format:
+M integers, 1 per line, giving the smallest positive non-zero integer that is NOT the sum of a subset of numbers Sx through Sy inclusive, indexed from 1.

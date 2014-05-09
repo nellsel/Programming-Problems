@@ -1,0 +1,16 @@
+Given 2 strings A and B you need to determine the minimum total number of letters which need to be removed from both strings to transform them into anagrams of one another.
+
+e.g.
+A = “hello”
+B = “lol”
+The answer is 2 as deleting the “h” and “e” from “hello” will make it an anagram of “lol”.
+
+Constraints:
+A and B wil be composed of lowercase latin letters a-z
+1 <= length of A & B <= 10^6
+
+Input Format:
+2 lines, each containing a single string.
+
+Ouput Format:
+A single integer which is the number of characters which should be deleted from A and B
